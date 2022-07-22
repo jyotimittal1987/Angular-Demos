@@ -1,0 +1,39 @@
+<!-- Demo -Display only 1 item from an array -->
+<!-- <div class="card">
+    <img src="../../assets/fruits/{{fruits[0]?.name}}.png" alt={{fruits[0]?.name}}>
+    <div>
+        Name:<span>{{fruits[0].name}}</span>
+        Price:<span>{{fruits[0].price}} $</span>
+   </div>
+</div> -->
+
+<!-- Demo -Display all items from an array -->
+<div>
+    <div *ngFor="let fruit of fruits" class="card">
+        <img src="../../assets/fruits/{{fruit?.name}}.png" alt={{fruit?.name}}>
+        <div>
+            Name:<span>{{fruit?.name}}</span>
+            Price:<span>{{fruit?.price}} $</span>
+       </div>
+    </div>
+</div>
+
+<!-- Demo -Add new item to  an array -->
+ 
+
+<fieldset><legend><b>Add New Fruit</b></legend>
+<label class="field-label">Fruit Name : </label>
+<input type="text" id="fruit-name" [(ngModel)]="fruit.name" name="name">
+
+<br/>
+<label class="field-label">Price in USD :</label>
+<input type="text" id="fruit-price" [(ngModel)]="fruit.price" name="price">
+<br/>
+
+<label class="field-label">Price for Per : </label>
+<input type="text" id="unit" [(ngModel)]="fruit.unit" name="unit">
+
+<div class="save-button">
+    <input type="button" value="Save" (click)="saveFruit(fruit)">
+</div>
+</fieldset>
