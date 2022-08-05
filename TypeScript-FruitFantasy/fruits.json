@@ -1,0 +1,75 @@
+{
+    "fruits": [
+        {
+            "id": 1,
+            "name": "Apple",
+            "price": "2",
+            "image": "fruits/apple.png",
+            "unit": "piece"
+        },
+        {
+            "id": 2,
+            "name": "Banana",
+            "price": "1",
+            "image": "fruits/banana.png",
+            "unit": "piece"
+        },
+        {
+            "id": 3,
+            "name": "Orange",
+            "price": "1",
+            "image": "fruits/orange.png",
+            "unit": "1"
+        },
+        {
+            "id": 4,
+            "name": "Apricot",
+            "price": "1",
+            "image": "fruits/apricot.png",
+            "unit": "1"
+        },
+        {
+            "id": 5,
+            "name": "Jackfruit",
+            "price": "2",
+            "image": "fruits/jackfruit.png",
+            "unit": "1"
+        },
+        {
+            "id": 6,
+            "name": "Dragon fruit",
+            "price": "2",
+            "image": "fruits/dragonfruit.png",
+            "unit": "1"
+        },
+        {
+            "id": 7,
+            "name": "Pineapple",
+            "price": "2",
+            "image": "fruits/pineapple.png",
+            "unit": "1"
+        },
+        {
+            "id": 8,
+            "name": "Grapes",
+            "price": "1",
+            "image": "fruits/grapes.jfif",
+            "unit": "1"
+        },
+        {
+            "id": 9,
+            "name": "Mango",
+            "price": "2",
+            "image": "fruits/mango.jfif",
+            "unit": "1"
+        },
+        {
+            "id": 10,
+            "name": "Strawberry",
+            "price": "2",
+            "image": "fruits/strawberry.jfif",
+            "unit": "1"
+        }
+
+    ]
+}
