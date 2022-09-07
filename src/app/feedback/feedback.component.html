@@ -1,0 +1,88 @@
+<div>
+    <form class="form" (submit)="onSubmit()" #feedbackForm="ngForm">
+        <fieldset class="form-header">
+            <legend><span>Restaurant feedback Form</span></legend>
+
+            <mat-form-field appearance="legacy">
+                <input placeholder="First Name" type="text" matInput required minlength="3" name="firstName"
+                    id="firstName" #firstName="ngModel" [(ngModel)]="feedback.firstName" />
+                <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)">
+                    <div *ngIf="firstName.errors?.['required']">
+                        First name is required
+                    </div>
+                    <div *ngIf="firstName.errors?.['minlength']">
+                        First Name Minimum Length is {{firstName.errors?.['minlength']?.requiredLength}}
+                    </div>
+                </div>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <input type="text" placeholder="Last Name" matInput required minlength="3" name="lastName" id="lastName"
+                    #lastName="ngModel" [(ngModel)]="feedback.lastName">
+                <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">
+                    <div *ngIf="lastName.errors?.['required']">
+                        Last name is required
+                    </div>
+                    <div *ngIf="lastName.errors?.['minlength']">
+                        Last Name Minimum Length is {{lastName.errors?.['minlength']?.requiredLength}}
+                    </div>
+                </div>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <input type="text" placeholder="Contact Number" matInput required pattern="^[789]\d{9,9}$" name="contact" id="contact"
+                    #contact="ngModel" [(ngModel)]="feedback.contact">
+                <div *ngIf="contact?.invalid && (contact?.dirty || contact?.touched)">
+                    <div *ngIf="contact.errors?.['required']">
+                        Contact Number is required
+                    </div>
+                    <div *ngIf="contact.errors?.['pattern']">
+                       Pl provide valid contact number 
+                    </div>
+                </div>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <input type="text" placeholder="Email Id" matInput required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" id="email"
+                    #email="ngModel" [(ngModel)]="feedback.email">
+                <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                    <div *ngIf="email.errors?.['required']">
+                        Email Id  is required
+                    </div>
+                    <div *ngIf="email.errors?.['pattern']">
+                       Pl provide valid email  
+                    </div>
+                </div>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <mat-label>Location you visited</mat-label>
+                <mat-select id="location" name="location" [(ngModel)]="feedback.location">
+                    <mat-option *ngFor="let loc of location" [value]="loc">{{loc}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+           
+            <mat-label style="float:left;font-size:18px;">Overall Rating</mat-label><br/><br/>
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="5">Excellent</mat-radio-button>
+                <mat-radio-button value="4">Good</mat-radio-button>
+                <mat-radio-button value="3">Average</mat-radio-button>
+                <mat-radio-button value="2">Dissatisfied</mat-radio-button>
+            </mat-radio-group>
+          
+
+            <mat-form-field appearance="legacy">
+                <textarea rows="8" cols="45" placeholder="Any comments, questions or suggestions?" type="text" matInput
+                    name="description" id="description" #description="ngModel"
+                    [(ngModel)]="feedback.description"></textarea>
+            </mat-form-field>
+
+           
+
+            <button color="primary" [disabled]="!feedbackForm.valid" mat-raised-button type="submit">Submit</button>
+            <button color="primary" mat-raised-button type="reset">Reset</button>
+        </fieldset>
+    </form>
+
+</div>

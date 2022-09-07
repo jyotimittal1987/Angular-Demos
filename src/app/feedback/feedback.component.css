@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 150px;
+    margin-left:35em;
+    width: 30%;
+    font-size: medium;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 10px;
+  }
+  span{
+    font-size: 20px;
+    color:brown;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+.form-header {
+    margin-left:30px;
+    background-color: antiquewhite;
+ }
+  mat-form-field
+  {
+    display:block;
+  }
+  
